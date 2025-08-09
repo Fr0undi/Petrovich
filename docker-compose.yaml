@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  petrovich_parser:
+    build: .
+    container_name: petrovich_parser
+    restart: unless-stopped
+    env_file: .env
+    network_mode: "host"
+    command: python main.py
